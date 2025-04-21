@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Delishify - Food Delivery</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .card-img-top {
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div data-role="page" id="home">
+        <div data-role="header" class="bg-dark text-white text-center p-3">
+            <h1>Delishify</h1>
+        </div>
+        <div data-role="content" class="container mb-4">
+            <h2 class="text-center mt-3 mb-3">Featured Dishes</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="pizza.jpg" class="card-img-top" alt="Pizza">
+                        <div class="card-body">
+                            <h5 class="card-title">Cheese Pizza</h5>
+                            <p class="card-text">Delicious cheese pizza with fresh toppings.</p>
+                            <button class="btn btn-primary">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="burger.jpg" class="card-img-top" alt="Burger">
+                        <div class="card-body">
+                            <h5 class="card-title">Classic Burger</h5>
+                            <p class="card-text">Juicy beef burger with crispy fries.</p>
+                            <button class="btn btn-primary">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="pasta.jpg" class="card-img-top" alt="Pasta">
+                        <div class="card-body">
+                            <h5 class="card-title">Dry Cheese Pasta</h5>
+                            <p class="card-text">Creamy dry pasta with mayonise.</p>
+                            <button class="btn btn-primary">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="salad.jpg" class="card-img-top" alt="Salad">
+                        <div class="card-body">
+                            <h5 class="card-title">Fresh Salad</h5>
+                            <p class="card-text">Healthy green salad with fresh veggies.</p>
+                            <button class="btn btn-primary">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div data-role="page" id="about">
+        <div data-role="header" class="bg-dark text-white text-center p-3">
+            <h1>About Us</h1>
+        </div>
+        <div class="container mt-5 about-section">
+            
+            <p>Welcome to FoodExpress! We are passionate about delivering delicious meals right to your doorstep. Our mission is to provide high-quality, fresh, and hygienic food with the convenience of online ordering.</p>
+            <p>Our vision is to revolutionize the food delivery industry with speed, reliability, and customer satisfaction. We partner with top restaurants to bring you the best dining experience at home.</p>
+            <p>Customer satisfaction is our top priority. We ensure timely deliveries, easy order tracking, and a seamless experience from browsing to checkout. Join us and enjoy your favorite meals with just a click!</p>
+        </div>
+    </div>
+    
+    <div data-role="page" id="contact">
+        <div data-role="header" class="bg-dark text-white text-center p-3">
+            <h1>Contact Us</h1>
+        </div>
+        <div data-role="content" class="container mt-5">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Send Message</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

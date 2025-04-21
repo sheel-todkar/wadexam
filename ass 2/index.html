@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Page</title>
+<style>
+h2{
+text-align: center;
+color: white;
+}
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+.container {
+background: white;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+width: 500px;
+background-color: blue;
+}
+label {
+display: block;
+margin-top: 10px;
+}
+input, select {
+width: 100%;
+padding: 8px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+.gender, .hobbies {
+display: flex;
+
+gap: 10px;
+margin-top: 5px;
+}
+button {
+margin-top: 15px;
+width: 100%;
+padding: 10px;
+background: red;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Registration Form</h2>
+<form id="registrationForm">
+<label>First Name: <input type="text" id="firstName"
+required></label>
+<label>Last Name: <input type="text" id="lastName"
+required></label>
+<label>Age: <input type="number" id="age" required></label>
+<label>Date of Birth: <input type="date" id="dob"
+required></label>
+<label>Gender:</label>
+<div class="gender">
+<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female
+</div>
+<label>City:
+<select id="city">
+<option value="Mumbai">Mumbai</option>
+<option value="Pune">Pune</option>
+<option value="Nashik">Nashik</option>
+</select>
+</label>
+
+<label>Address: <input type="text" id="address"
+required></label>
+<label>Hometown: <input type="text" id="hometown"
+required></label>
+<label>Hobbies:</label>
+<div class="hobbies">
+<input type="checkbox" value="Reading"> Reading
+<input type="checkbox" value="Sports"> Sports
+<input type="checkbox" value="Music"> Music
+</div>
+<button type="button" onclick="submitForm()">Register</button>
+</form>
+</div>
+<script>
+function submitForm() {
+let firstName = document.getElementById("firstName").value;
+let lastName = document.getElementById("lastName").value;
+let age = document.getElementById("age").value;
+let dob = document.getElementById("dob").value;
+let gender =
+document.querySelector('input[name="gender"]:checked');
+let city = document.getElementById("city").value;
+let address = document.getElementById("address").value;
+let hometown = document.getElementById("hometown").value;
+let hobbies =
+Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).ma
+p(e => e.value);
+if (!firstName || !lastName || !age || !dob || !gender ||
+!address || !hometown) {
+alert("Please fill in all required fields.");
+return;
+}
+alert(`Registration Successful!\nName: ${firstName}
+${lastName}\nAge: ${age}\nDOB: ${dob}\nGender: ${gender.value}\nCity:
+${city}\nAddress: ${address}\nHometown: ${hometown}\nHobbies:
+${hobbies.join(", ")}`);
+}
+
+</script>
+</body>
+</html>

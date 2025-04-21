@@ -1,0 +1,6 @@
+<h2>Welcome to your Profile</h2>
+<div *ngIf="user">
+  <p><strong>Name:</strong> {{user.username}}</p>
+  <p><strong>Email:</strong> {{user.email}}</p>
+  <button (click)="logout()">Logout</button>
+</div>
