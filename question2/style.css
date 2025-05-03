@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  
+  
+  nav {
+    background-color: #333;
+    text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: #333;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #00bcd4;
+  }
+  
+  /* Sections */
+  section {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  section h2 {
+    color: #0077cc;
+    margin-bottom: 10px;
+  }
+  
+  /* About Image */
+  #about img {
+    width: 250px;
+    height: 200px;
+    display: block;
+    margin: 0 auto 15px auto;
+    border: 4px solid #0077cc;
+  }
+  
+  /* Skills */
+  #skills ul,
+  #projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  #skills li,
+  #projects li {
+    background-color: #e0f7fa;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  /* Contact Links */
+  #contact a {
+    color: #0077cc;
+  }
+  
+  #contact a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 400px) {
+    nav ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    section {
+      margin: 15px;
+      padding: 15px;
+      text-align: center;
+    }
+  }
+  

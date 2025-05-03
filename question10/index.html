@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AJAX To-Do List</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    #todoApp {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input[type="text"] {
+      width: 70%;
+      padding: 10px;
+    }
+    button {
+      padding: 10px 15px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 8px;
+      background: #eee;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .actions button {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="todoApp">
+  <h2>To-Do List 📝</h2>
+  <input type="text" id="taskInput" placeholder="New task..." />
+  <button onclick="addTask()">Add</button>
+  <ul id="taskList"></ul>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

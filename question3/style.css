@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    background-color: #fdfdfd;
+  }
+  
+  header {
+    background-image: url('images/indian_restaurant.webp');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    color: white;
+    position: relative;
+    text-align: center;
+    text-decoration: solid;
+  }
+  header h1 {
+    font-size: 3rem;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+    header p {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+  
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  header .overlay {
+    position: relative;
+    z-index: 2;
+    padding-top: 80px;
+  }
+  
+  nav {
+    background-color: #333;
+ 
+    padding: 0.5rem;
+    text-align: center;
+    font-size: larger;
+   
+
+  }
+  
+  nav ul {
+    list-style: none;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
+  
+  nav ul li {
+    margin: 0 50px;
+    color: #333;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    color: #ffcc00;
+  }
+  
+  section {
+    padding: 2rem;
+    text-align: center;
+    font-size: larger;
+  }
+  section h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+  }
+  section p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+  }
+
+  
+  .cuisine-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .cuisine-list div {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .cuisine-list img {
+    width: auto;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+  }
+  
+  th, td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+  }
+  
+  td img {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
