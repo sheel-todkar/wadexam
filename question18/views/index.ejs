@@ -3,36 +3,62 @@
 <head>
   <title>Song List</title>
   <style>
-    table, th, td {
-      border: 1px solid black;
+    body {
+      font-family: Arial, sans-serif;
+    }
+    table {
+      width: 100%;
       border-collapse: collapse;
+      margin-top: 20px;
     }
     th, td {
-      padding: 8px;
+      padding: 10px;
+      border: 1px solid #aaa;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
+
   <h1>Song List</h1>
+
   <table>
-    <tr>
-      <th>Song Name</th>
-      <th>Film</th>
-      <th>Music Director</th>
-      <th>Singer</th>
-      <th>Actor</th>
-      <th>Actress</th>
-    </tr>
-    <% songs.forEach(song => { %>
+    <thead>
       <tr>
-        <td><%= song.Songname %></td>
-        <td><%= song.Film %></td>
-        <td><%= song.Music_director %></td>
-        <td><%= song.singer %></td>
-        <td><%= song.actor || "-" %></td>
-        <td><%= song.actress || "-" %></td>
+        <th>Song Name</th>
+        <th>Film</th>
+        <th>Music Director</th>
+        <th>Singer</th>
+        <th>Actor</th>
+        <th>Actress</th>
       </tr>
-    <% }) %>
+    </thead>
+    <tbody>
+      <% if (songs.length === 0) { %>
+        <tr>
+          <td colspan="6" style="text-align: center;">No songs found</td>
+        </tr>
+      <% } else { %>
+        <% songs.forEach(song => { %>
+          <tr>
+            <td><%= song.Songname %></td>
+            <td><%= song.Film %></td>
+            <td><%= song.Music_director %></td>
+            <td><%= song.singer %></td>
+            <td><%= song.actor || '-' %></td>
+            <td><%= song.actress || '-' %></td>
+          </tr>
+        <% }); %>
+      <% } %>
+    </tbody>
   </table>
+
 </body>
 </html>
