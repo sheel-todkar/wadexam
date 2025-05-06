@@ -1,22 +1,29 @@
 const express = require('express');
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs');
+const cors = require('cors')
 
 const app = express();
 const PORT = 3000;
 
-app.use(express.static('public'));
+app.use(cors())
 
-app.get('/api/users', (req, res) => {
-  fs.readFile('users.json', 'utf8', (err, data) => {
+// Middleware to serve static files like images
+app.use(express.static(path.join(__dirname, 'public')));
+
+// API endpoint to fetch products
+app.get('/api/products', (req, res) => {
+  // Read the products.json file
+  fs.readFile('./products.json', 'utf8', (err, data) => {
     if (err) {
-      res.status(500).json({ error: 'Unable to read user data' });
+      res.status(500).json({ message: 'Error reading product data' });
     } else {
-      res.json(JSON.parse(data));
+      res.json(JSON.parse(data)); // Return parsed JSON data
     }
   });
 });
 
+// Start the server
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
