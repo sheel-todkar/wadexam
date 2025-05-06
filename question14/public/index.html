@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User List</title>
+</head>
+<body>
+  <h1>Users</h1>
+  <ul id="user-list"></ul>
+
+  <script>
+    async function fetchUsers() {
+      try {
+        const response = await fetch('/api/users');
+        const users = await response.json();
+
+        const userList = document.getElementById('user-list');
+        userList.innerHTML = '';
+
+        users.forEach(user => {
+          const li = document.createElement('li');
+          li.textContent = `${user.name} (${user.email})`;
+          userList.appendChild(li);
+        });
+      } catch (error) {
+        console.error('Error fetching users:', error);
+      }
+    }
+
+    fetchUsers();
+  </script>
+</body>
+</html>

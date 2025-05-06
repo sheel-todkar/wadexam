@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mug Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f9f9f9;
+    }
+    .product-card img {
+      height: 180px;
+      object-fit: cover;
+    }
+    .filter-heading {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+    .sidebar {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid my-4">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3 mb-4">
+        <div class="sidebar shadow-sm">
+          <h5 class="mb-3">Target Market</h5>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="usa"><label class="form-check-label" for="usa">USA</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="canada"><label class="form-check-label" for="canada">Canada</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="uk"><label class="form-check-label" for="uk">United Kingdom</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="europe"><label class="form-check-label" for="europe">Europe</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="anz"><label class="form-check-label" for="anz">Australia/NZ</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="china"><label class="form-check-label" for="china">China</label></div>
+          <hr>
+          <h6 class="filter-heading">Print Area</h6>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="all"><label class="form-check-label" for="all">All areas</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="front"><label class="form-check-label" for="front">Front side</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="wrap"><label class="form-check-label" for="wrap">Wraparound</label></div>
+          <hr>
+          <h6 class="filter-heading">Print Providers</h6>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="art"><label class="form-check-label" for="art">Artia4d</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="colorway"><label class="form-check-label" for="colorway">Colorway</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="district"><label class="form-check-label" for="district">District Photo</label></div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-md-9">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4>Mugs</h4>
+          <select class="form-select w-auto">
+            <option selected>Sort by: Popularity</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest</option>
+          </select>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card Example -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card product-card">
+              <img src="https://media.istockphoto.com/id/821282266/photo/white-mug-isolated.jpg?s=612x612&w=0&k=20&c=LJCMPk0D83OKmJHahkiLzAB3OsKr83nMbL7KxSgfpfM=" class="card-img-top" alt="Mug">
+              <div class="card-body">
+                <h6 class="card-title">Ceramic Mug 11oz</h6>
+                <p class="card-text small">From USD $4.40<br><small>1 seller: District Photo</small></p>
+                <button class="btn btn-outline-primary btn-sm">View</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat as needed -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card product-card">
+              <img src="https://media.istockphoto.com/id/1898217140/photo/11oz-two-tone-mugs-on-isolated-background.jpg?s=612x612&w=0&k=20&c=BRAy70BG8On0XZjgYoxuqv125haGt7pYBmIXZur8o30=" class="card-img-top" alt="Mug">
+              <div class="card-body">
+                <h6 class="card-title">Accent Coffee Mug 11oz</h6>
+                <p class="card-text small">From USD $5.52<br><small>2 sellers: District & Sockers</small></p>
+                <button class="btn btn-outline-primary btn-sm">View</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more product cards here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
